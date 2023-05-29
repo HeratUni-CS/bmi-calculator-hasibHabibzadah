@@ -2,28 +2,24 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class IconContent extends StatelessWidget {
-  final IconData icon;
+  final IconData iconData;
   final String label;
-  IconContent({required this.icon, required this.label});
 
-
+  IconContent({required this.iconData, required this.label});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Icon(
-          icon,
-          size: 80.0,
-        ),
+      children: [
+        Icon(iconData, size: 65, color: Color(0xFF868892)),
         SizedBox(
-          height: 15.0,
+          height: 10,
         ),
         Text(
           label,
-          style: kLabelTextStyle,
-        )
+          style: kNumberStyle,
+        ),
       ],
     );
   }
